@@ -14,6 +14,7 @@ class Circle:
         self.area = math.pi * (self.radius ** 2)
         return self.area
 
+
 if __name__ == "__main__":
     crc1 = Circle(5)
     crc1.calculate_perimeter()

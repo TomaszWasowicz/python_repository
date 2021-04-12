@@ -15,7 +15,7 @@ class Triangle:
         self.area = 0.5 * self.base * self.height
         return self.area
 
-trg1 = Triangle(6,4)
+
+trg1 = Triangle(6, 4)
 trg1.calculate_perimeter()
 trg1.calculate_area()
-
