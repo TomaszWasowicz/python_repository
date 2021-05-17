@@ -57,7 +57,7 @@ class BikeRental:
             self.stock -= n
             return now
 
-    def returnBike(self, request):    # 1. przyjmuj wypożyczony rower od klienta, 2. uzupełnij zapas rowerów, 3. zwróć rachunek
+    def returnBike(self, request):                          # 1. przyjmuj wypożyczony rower od klienta, 2. uzupełnij zapas rowerów, 3. zwróć rachunek
         rentalTime, rentalBasis, numOfBikes = request        # extract the tuple and initiate bill
         bill = 0
         if rentalTime and rentalBasis and numOfBikes:       # wystaw rachunek tylko wtedy, gdy wszystkie 3 parametry nie są pełne
@@ -108,3 +108,4 @@ class Customer:
             return self.rentalTime, self.rentalBasis, self.bikes
         else:
             return 0, 0, 0
+
