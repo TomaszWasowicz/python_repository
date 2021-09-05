@@ -58,13 +58,13 @@ class TicTacToe:
         return [i for i, x in enumerate(self.board) if x == " "]
 
 
-def play(game, x_player, o_player, print_game=True):    #funkcja wlasciwej rozgrywki, przyjmuje wartosc 'gra', dwojki graczy oraz wartosc true albo false jesli nie chemy drukowac planszy gry
+def play(game, x_player, o_player, print_game=True):                #funkcja wlasciwej rozgrywki, przyjmuje wartosc 'gra', dwojki graczy oraz wartosc true albo false jesli nie chemy drukowac planszy gry
 
     if print_game:
-        game.print_board_nums()      # jesli w/w wartosc ma parametr true, drukujemy stany gry
+        game.print_board_nums()                                     # jesli w/w wartosc ma parametr true, drukujemy stany gry
 
-    letter = 'X'                      # przypisanie wartosci
-    while game.empty_squares():         # jesli plansza jest pusta to: ...
+    letter = 'X'                                                    # przypisanie wartosci
+    while game.empty_squares():                                     # jesli plansza jest pusta to: ...
         if letter == 'O':
             square = o_player.get_move(game)
         else:
@@ -88,7 +88,7 @@ def play(game, x_player, o_player, print_game=True):    #funkcja wlasciwej rozgr
         print('It\'s a tie!')
 
 
-class Player:             #klasa 'gracz', mozna ją wyimportować do oddzielnego pliku, a następnie importować plik klasy 'gracz',  jak moduł
+class Player:                                                     #klasa 'gracz', mozna ją wyimportować do oddzielnego pliku, a następnie importować plik klasy 'gracz',  jak moduł
     def __init__(self, letter):
         self.letter = letter
 
@@ -104,7 +104,7 @@ class HumanPlayer(Player):
         valid_square = False
         val = None
         while not valid_square:
-            square = input(self.letter + '\'s turn. Input move (0-9): ')  #za kazdym dozwolony ruchem nastepuje przyjecie - inputu
+            square = input(self.letter + '\'s turn. Input move (0-8): ')  #za kazdym dozwolony ruchem nastepuje przyjecie - inputu
             try:
                 val = int(square)                                           #zmiana przyjetej wartosci na integer
                 if val not in game.available_moves():                       # jesli wartosc nie wystepuje w liscie dozwolonych ruchow
@@ -112,19 +112,19 @@ class HumanPlayer(Player):
                 valid_square = True
             except ValueError:
                 print('Invalid square. Try again.')                         # wiadomosc o bledzie ValueError
-        return val                                                             #jesli wartosc poprawna, zwracam ją
+        return val                                                           #jesli wartosc poprawna, zwracam ją
 
 
-class RandomComputerPlayer(Player):                             #klasa randomowego AI
+class RandomComputerPlayer(Player):                                     #klasa randomowego AI
     def __init__(self, letter):
         super().__init__(letter)
 
-    def get_move(self, game):                                   #funckja ruchu
-        square = random.choice(game.available_moves())          # randomowe wybory ruchow z listy dozwolonych ruchow
+    def get_move(self, game):                                           #funckja ruchu
+        square = random.choice(game.available_moves())                  # randomowe wybory ruchow z listy dozwolonych ruchow
         return square
 
 
-class SmartComputerPlayer(Player):                              #  klasa 'smart" AI
+class SmartComputerPlayer(Player):                                      #  klasa 'smart" AI
     def __init__(self, letter):
         super().__init__(letter)
 
