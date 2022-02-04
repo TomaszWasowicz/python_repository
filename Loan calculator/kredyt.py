@@ -14,10 +14,6 @@ wpm = 60
 print("Maksymalny wiek aplikanta to:", irb)
 
 
-def dane(self):
-        pass
-
-
 def k(self):
     if wkz <= wkb:
         return 1

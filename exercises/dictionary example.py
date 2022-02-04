@@ -10,4 +10,5 @@ Dict = {'Name': 'Geeks', 1: [1, 2, 3, 4]}
 print("\nDictionary with the use of Mixed Keys: ")
 print(Dict)
 
-słownik = {}
+ages = {"Dave" : 24, "Mary" : 42, "John": 58}
+print(ages["Dave"], ages ["Mary"])

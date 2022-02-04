@@ -1,6 +1,7 @@
 import turtle
 
-def rectangle(step = 100):
+
+def rectangle(step=100):
     t = turtle.Pen()
     angle = 90
     i = 0
@@ -15,5 +16,5 @@ def rectangle(step = 100):
         i = 0
     turtle.Screen().exitonlick()
 
-rectangle()
 
+rectangle()

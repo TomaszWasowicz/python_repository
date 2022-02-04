@@ -1,5 +1,6 @@
 import math
 
+
 class Triangle:
     def __init__(self, base, height):
         self.base = base
@@ -8,7 +9,7 @@ class Triangle:
         self.area = 0
 
     def calculate_perimeter(self):
-        self.perimeter = 3* self.base
+        self.perimeter = 3 * self.base
         return self.perimeter
 
     def calculate_area(self):

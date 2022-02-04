@@ -26,6 +26,8 @@ class MyTestCase(unittest.TestCase):
         level.park(Car('l1'))
         level.park(Car('l2'))
         self.assertEqual(0, level.availableSpots)
+
+
 def fillLevel(parkingLot):
     for spot in range(12):
         parkingLot.parkCar(Car('lic'+str(spot)))
