@@ -10,7 +10,7 @@ def index():
 
 
 @app.route("/getTime", methods=['GET'])
-def getTime():
+def get_time():
     print("browser time: ", request.args.get("time"))
     print("server time : ", time.strftime('%A %B, %d %Y %H:%M:%S'))
     return "Done"

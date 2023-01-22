@@ -17,3 +17,5 @@ print('The filtered letters are:')
 for s in filtered:
     print(s)
 
+reduced = reduce(fun, sequence)
+
